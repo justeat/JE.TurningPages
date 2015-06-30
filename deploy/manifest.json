@@ -1,0 +1,13 @@
+{
+    "scripts":  {
+                    "version":  1
+                },
+    "feature":  {
+                    "name":  "turningpages",
+                    "role":  "library"
+                },
+    "build":  {
+                  "solution":  "JE.TurningPages.Library.sln",
+                  "mainproject":  "JE.TurningPages.Library\\JE.TurningPages.Library.csproj"
+              }
+}
