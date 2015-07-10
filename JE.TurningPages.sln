@@ -12,7 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{2EC480
 		version.txt = version.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JE.TurningPages.Library", "src\JE.TurningPages.Library\JE.TurningPages.Library.csproj", "{34ACDBE5-8B6C-4432-86AA-9D8567CDC2B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JE.TurningPages", "src\JE.TurningPages\JE.TurningPages.csproj", "{34ACDBE5-8B6C-4432-86AA-9D8567CDC2B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JE.TurningPages.Tests", "src\JE.TurningPages.Tests\JE.TurningPages.Tests.csproj", "{9BFCBA8C-171C-4DB4-8468-09204ADE4BC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +26,10 @@ Global
 		{34ACDBE5-8B6C-4432-86AA-9D8567CDC2B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34ACDBE5-8B6C-4432-86AA-9D8567CDC2B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34ACDBE5-8B6C-4432-86AA-9D8567CDC2B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BFCBA8C-171C-4DB4-8468-09204ADE4BC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BFCBA8C-171C-4DB4-8468-09204ADE4BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BFCBA8C-171C-4DB4-8468-09204ADE4BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BFCBA8C-171C-4DB4-8468-09204ADE4BC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

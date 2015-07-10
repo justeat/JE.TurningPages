@@ -7,8 +7,8 @@
     <ProjectGuid>{34ACDBE5-8B6C-4432-86AA-9D8567CDC2B6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JE.TurningPages.Library</RootNamespace>
-    <AssemblyName>JE.TurningPages.Library</AssemblyName>
+    <RootNamespace>JE.TurningPages</RootNamespace>
+    <AssemblyName>JE.TurningPages</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,7 +42,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="JE.TurningPages.Library.nuspec" />
+    <None Include="JE.TurningPages.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
