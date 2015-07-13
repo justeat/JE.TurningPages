@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using JE.TurningPages.Contracts;
 using Newtonsoft.Json;
 
-namespace JE.TurningPages
+namespace JE.TurningPages.WebApi
 {
     public class PaginationLinkHeaderEnrichment : DelegatingHandler
     {

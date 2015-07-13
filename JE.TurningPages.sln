@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{2EC480
 		version.txt = version.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JE.TurningPages", "src\JE.TurningPages\JE.TurningPages.csproj", "{34ACDBE5-8B6C-4432-86AA-9D8567CDC2B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JE.TurningPages.WebApi", "src\JE.TurningPages.WebApi\JE.TurningPages.WebApi.csproj", "{34ACDBE5-8B6C-4432-86AA-9D8567CDC2B6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JE.TurningPages.Tests", "src\JE.TurningPages.Tests\JE.TurningPages.Tests.csproj", "{9BFCBA8C-171C-4DB4-8468-09204ADE4BC4}"
 EndProject
