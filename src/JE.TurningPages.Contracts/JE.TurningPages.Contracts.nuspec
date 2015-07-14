@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/justeat/JE.TurningPages/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/justeat/JE.TurningPages</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>https://github.com/justeat/JE.TurningPages/CHANGELOG.md</releaseNotes>
+    <copyright>Copyright JUST EAT 2015</copyright>
+    <tags>webapi web-api link-header page paging unbounded</tags>
+  </metadata>
+</package>

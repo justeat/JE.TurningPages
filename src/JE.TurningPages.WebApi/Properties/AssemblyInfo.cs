@@ -5,9 +5,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("JE.TurningPages.Library")]
+[assembly: AssemblyTitle("JE.TurningPages.WebApi")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyProduct("JE.TurningPages.Library")]
+[assembly: AssemblyProduct("JE.TurningPages.WebApi")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

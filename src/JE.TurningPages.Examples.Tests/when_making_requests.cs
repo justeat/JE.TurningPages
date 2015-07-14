@@ -2,7 +2,6 @@
 using System.Net.Http;
 using JE.TurningPages.Examples.WebApi;
 using Microsoft.Owin.Testing;
-using NUnit.Framework;
 
 namespace JE.TurningPages.Examples.Tests
 {

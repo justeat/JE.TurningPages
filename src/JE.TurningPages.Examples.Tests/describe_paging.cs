@@ -1,4 +1,5 @@
 using System;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Shouldly;
 
@@ -8,9 +9,14 @@ namespace JE.TurningPages.Examples.Tests
     {
         public async Task when_request_is_successful()
         {
-            act = () => Response = App.CreateRequest("/widgets").GetAsync().Result;
-            it["should have a link header"] = () => Response.Headers.ShouldContain(x => x.Key.Equals("link", StringComparison.InvariantCultureIgnoreCase));
-            it["should have a pagination header"] = () => Response.Headers.ShouldContain(x => x.Key.Equals("x-pagination", StringComparison.InvariantCultureIgnoreCase));
+            act = async () => Response = await App.CreateRequest("/widgets").GetAsync().ConfigureAwait(false);
+            it["should have a link header"] = () => ShouldHaveHeader(Response, "link");
+            it["should have a pagination header"] = () => ShouldHaveHeader(Response, "x-pagination");
+        }
+
+        private static void ShouldHaveHeader(HttpResponseMessage message, string header)
+        {
+            message.Headers.ShouldContain(x => x.Key.Equals(header, StringComparison.InvariantCultureIgnoreCase));
         }
     }
 }
