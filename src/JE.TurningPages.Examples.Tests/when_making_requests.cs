@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Linq;
 using System.Net.Http;
 using JE.TurningPages.Examples.WebApi;
 using Microsoft.Owin.Testing;
+using Shouldly;
 
 namespace JE.TurningPages.Examples.Tests
 {
@@ -24,6 +26,16 @@ namespace JE.TurningPages.Examples.Tests
         public void Dispose()
         {
             if (App != null) { App.Dispose(); }
+        }
+
+        protected static void ShouldNotHaveHeader(HttpResponseMessage response, string header)
+        {
+            response.Headers.ShouldNotContain(x => x.Key.Equals(header, StringComparison.InvariantCultureIgnoreCase), () => string.Join("\n", response.Headers.Select(y => y.Key + " " + y.Value)));
+        }
+
+        protected static void ShouldHaveHeader(HttpResponseMessage message, string header)
+        {
+            message.Headers.ShouldContain(x => x.Key.Equals(header, StringComparison.InvariantCultureIgnoreCase), () => string.Join("\n", message.Headers.Select(y => y.Key + " " + y.Value)));
         }
     }
 }
