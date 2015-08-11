@@ -15,9 +15,9 @@ namespace JE.TurningPages.WebApi
             CancellationToken cancellationToken)
         {
             if (request.RequestUri.ToString().Contains("favicon.ico")) {
-                return await base.SendAsync(request, cancellationToken).ConfigureAwait(true);
+                return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
             }
-            var response = await base.SendAsync(request, cancellationToken).ConfigureAwait(true);
+            var response = await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
             return EnrichWithPagingLinkHeader(request, response);
         }
 
