@@ -79,6 +79,7 @@
     </Compile>
     <Compile Include="DebuggerShim.cs" />
     <Compile Include="describe_paging.cs" />
+    <Compile Include="does_not_deadlock.cs" />
     <Compile Include="nspec_base.cs" />
     <Compile Include="when_making_requests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

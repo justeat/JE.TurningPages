@@ -10,20 +10,20 @@ namespace JE.TurningPages.WebApi
 {
     public class PaginationLinkHeaderEnrichment : DelegatingHandler
     {
-        protected override Task<HttpResponseMessage> SendAsync(
+        protected override async Task<HttpResponseMessage> SendAsync(
             HttpRequestMessage request,
             CancellationToken cancellationToken)
         {
             if (request.RequestUri.ToString().Contains("favicon.ico")) {
-                return base.SendAsync(request, cancellationToken);
+                return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
             }
-            var response = base.SendAsync(request, cancellationToken);
+            var response = await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
             return EnrichWithPagingLinkHeader(request, response);
         }
 
-        private static Task<HttpResponseMessage> EnrichWithPagingLinkHeader(
+        private static HttpResponseMessage EnrichWithPagingLinkHeader(
             HttpRequestMessage request,
-            Task<HttpResponseMessage> response)
+            HttpResponseMessage response)
         {
             if (!ShouldEnrichResponse(request, response)) { return response; }
             var pagingInfo = ReadPaginationInfo(request);
@@ -41,7 +41,7 @@ namespace JE.TurningPages.WebApi
             return request.Properties[PaginationInfo.PropertyKey] as PaginationInfo;
         }
 
-        private static bool ShouldEnrichResponse(HttpRequestMessage request, Task<HttpResponseMessage> response)
+        private static bool ShouldEnrichResponse(HttpRequestMessage request, HttpResponseMessage response)
         {
             return !IsErrorResponse(response) && NeedsLinkHeader(request)
                    && PageInfoIsPresentInRequestProperties(request);
@@ -54,9 +54,9 @@ namespace JE.TurningPages.WebApi
             return value != null;
         }
 
-        private static bool IsErrorResponse(Task<HttpResponseMessage> response)
+        private static bool IsErrorResponse(HttpResponseMessage response)
         {
-            return !response.Result.IsSuccessStatusCode;
+            return !response.IsSuccessStatusCode;
         }
 
         private static bool NeedsLinkHeader(HttpRequestMessage request)
@@ -130,9 +130,9 @@ namespace JE.TurningPages.WebApi
         private static void AddHeaderToResponse(
             string headerName,
             string headerValue,
-            Task<HttpResponseMessage> response)
+            HttpResponseMessage response)
         {
-            response.Result.Headers.Add(headerName, headerValue);
+            response.Headers.Add(headerName, headerValue);
         }
     }
 }
